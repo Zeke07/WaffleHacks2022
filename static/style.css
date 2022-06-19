@@ -1,4 +1,5 @@
 
+
 html {
     background: url(kitchen.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -48,6 +49,8 @@ ul {
     display: block;
     margin: auto;
     text-align: center;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 form button{
@@ -137,6 +140,7 @@ h2 {
     justify-content: center;
     padding: 0;
     margin-left: -10px;
+    margin-bottom: 50px;
 
 }
 
@@ -178,110 +182,94 @@ h3 {
     color: red;
 }
 
-/*
-html {
-    background: url(kitchen.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-body {
+.link {
     color: white;
-    font-family: 'Open Sans', sans-serif;
-}
-
-h1 {
-    text-align: left;
-    margin-top: 30px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
     font-size: 3rem;
-    margin-left: 30px;
-    font-family: 'Raleway', sans-serif;
-    margin-bottom: 60px;
-    padding-bottom: 50px;
-}
-
-.slogan {
-    text-align: center;
-    margin-top: 0;
-    font-size: 2rem;
-}
-
-.slogan {
-    text-align: left;
-    margin-left: 25px;
-    margin-top: 50px;
-}
-
-.slogan p {
-    margin: 0;
-    font-size: 6rem;
-    font-family: 'Questrial', sans-serif;
-    padding: 0;
-
-}
-
-ul {
-    display: block;
+    max-width: 50%;
     margin: auto;
-    text-align: center;
 }
 
-form button{
-    text-align: left;
-    margin-left: 20px;
-    width: 200px;
-    height: 60px;
+h5 {
+    text-align: center;
     font-size: 2rem;
-    margin-top: 10px;
     font-family: 'Questrial', sans-serif;
-    background: #9eec86;
-    color: black;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-
-}
-
-form button:hover {
-    background: #81b970;
-    transition: 0.25s;
-}
-
-.input-container {
-    padding-left: 20px;
-    padding-top: 20px;
-    text-align: left;
-}
-
-.input-container input {
-    width: 600px;
-    height: 60px;
-    font-size: 2rem;
-    font-family: 'Open Sans', sans-serif;
-    padding-left: 15px;
-    display: block;
-    margin-bottom: 10px;
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px white solid;
     color: white;
+    margin-top: 0;
+    padding-bottom: 20px;
+
+
 }
 
-::placeholder {
-    color: rgba(255, 255, 255, .7);
-    opacity: 1;
-}
-h2 {
+h4 {
     text-align: center;
-    font-family: 'Questrial', sans-serif;
     font-size: 4rem;
+    font-family: 'Questrial', sans-serif;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
-form {
-        padding-bottom: 150px;
+
+h6 {
+    text-align: center;
+    color: rgb(145, 228, 118);
+    font-size: 7rem;
+    margin-top: 20px;
+    font-family: 'Questrial', sans-serif;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+
 }
-.nutri1 {
-    text-align: left;
-    color: red;
+
+.target h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2rem;
+    margin-top: 5px;
+    font-family: 'Questrial', sans-serif;
+    margin-bottom: 200px;
+
 }
-*/
+
+table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 0;
+    width: 400px;
+    margin-right: 200px;
+
+
+}
+
+table th {
+    font-size: 3rem;
+    font-family: 'Questrial', sans-serif;
+
+}
+
+table td {
+    font-size: 2rem;
+}
+
+.output {
+    display: flex;
+    flex-direction: row;
+}
+
+.product {
+    margin: 0;
+    padding: 0;
+}
+
+.bun {
+    text-align: center;
+    align-items: center;
+}
