@@ -13,7 +13,7 @@ def nutrition_score(grams: int, rank: int, max_good_rank: int, max_bad_rank: int
     return grams * (max_good_rank - rank + 1 if rank > 0 else max_bad_rank - rank + 1)
 
 
-def filter_food_item(food_item: Dict[str, Tuple[int, int]]) -> None:
+def filter_food_item(food_item: Dict[str, Tuple[int, int]]) -> Dict[str, Any]:
     """Filters specific food item by excluding all key-value pairs with non-integer value."""
     name = food_item['name']
     filtered_dict = dict(list(food_item.items()) |
@@ -22,21 +22,27 @@ def filter_food_item(food_item: Dict[str, Tuple[int, int]]) -> None:
     filtered_dict = dict(list(filtered_dict.items()) |
                          where(lambda kvp: kvp[1] > 0))
     filtered_dict['name'] = name
-    filtered_dict['net score'] = 0
-    food_item = filtered_dict
+    filtered_dict['net score'] = 9
+    # pprint(f'filtered_dict:\n{filtered_dict}')
+    return filtered_dict
 
 
-def append_rank_to_food_item(food_item: Dict[str, Any], **ranks) -> None:
+def append_rank_to_food_item(food_item: Dict[str, Any], ranks: Dict[str, int]) -> Dict[str, Any]:
     """Convert each value of user-ranked nutrition to (grams, rank) tuple."""
-    for ranked_nutrition in set(food_item.keys()).intersection(set(ranks.keys())):
-        food_item[ranked_nutrition] = (
-            food_item[ranked_nutrition], ranks[ranked_nutrition])
+    food_item_local = copy.deepcopy(x=food_item)
+    modified_nutrients = set(food_item.keys()).intersection(set(ranks.keys()))
+    # pprint(f'modified_nutrients:\n{modified_nutrients}')
+    for ranked_nutrition in modified_nutrients:
+        food_item_local[ranked_nutrition] = (food_item[ranked_nutrition], ranks[ranked_nutrition])
+    # pprint(f'append_rank_dict:\n{food_item_local}')
+    return food_item_local
 
 
-def append_net_score(food_item: Dict[str, Any]) -> None:
+def append_net_score(food_item: Dict[str, Any]) -> Dict[str, Any]:
     """Find and append net score for a specific food item with its nutritions ranked by preference."""
     # max_good_rank = reduce(lambda x, y: max(x, y[1]) if y[1] > 0 else x, nutrition.values(), 0)
     # max_bad_rank = len(nutrition) - max_good_rank
+    food_item_local = copy.deepcopy(x=food_item)
     net_score = sum(food_item.values() |
                     where(lambda x: type(x) == tuple) |
                     select(lambda x: nutrition_score(
@@ -45,17 +51,16 @@ def append_net_score(food_item: Dict[str, Any]) -> None:
                         max_good_rank=3,
                         max_bad_rank=3)))
     # print(f'computed score:\t{net_score}')
-    food_item['net score'] = net_score
+    food_item_local['net score'] = net_score
+    return food_item_local
 
-
-def transform_food_item(food_item: Dict[str, Any], **ranks) -> Dict[str, Any]:
+def transform_food_item(food_item: Dict[str, Any], ranks: Dict[str, int]) -> Dict[str, Any]:
     """Performs all transformations for data cleaning on food items before heapifying."""
-    cp = copy.deepcopy(x=food_item)
-    filter_food_item(food_item=cp)
-    append_rank_to_food_item(food_item=cp, ranks=ranks)
-    append_net_score(food_item=cp)
-    return cp
-
+    food_item_local = copy.deepcopy(x=food_item)
+    food_item_local = filter_food_item(food_item=food_item_local)
+    food_item_local = append_rank_to_food_item(food_item=food_item_local, ranks=ranks)
+    food_item_local = append_net_score(food_item=food_item_local)
+    return food_item_local
 
 # example
 if DEBUG:
@@ -115,15 +120,22 @@ food_items = list([
         'Calories From Fat': 270, 'Total Fat': 30, 'Saturated Fat': 12, 'Cholesterol': 95, 'Sodium': 590, 'Total Carbohydrate': 2, 'Sugars': 1, 'Protein': 26},
     {'name': 'Aidells Chicken u0026#38; Apple Smoked Chicken Sausage - 12oz/4ct', 'price': 5.99, 'Servings Per Container': '4', 'Calories': 170, 'Calories From Fat': 100,
         'Total Fat': 11, 'Saturated Fat': 3.5, 'Trans Fat': 0, 'Cholesterol': 75, 'Sodium': 660, 'Total Carbohydrate': 4, 'Dietary Fiber': 1, 'Sugars': 3, 'Protein': 13},
-    {'name': 'USDA Choice Angus Beef Stew Meat - 24oz - Good u0026#38; Gatheru0026#8482;', 'price': 10.99, 'Servings Per Container': '7.5', 'Calories': 200, 'Calories From Fat': 110, 'Total Fat': 12, 'Saturated Fat': 5, 'Cholesterol': 60, 'Sodium': 290, 'Total Carbohydrate': 2, 'Protein': 21}, ])
+    {'name': 'USDA Choice Angus Beef Stew Meat - 24oz - Good u0026#38; Gatheru0026#8482;', 'price': 10.99, 'Servings Per Container': '7.5', 'Calories': 200, 'Calories From Fat': 110, 'Total Fat': 12, 'Saturated Fat': 5, 'Cholesterol': 60, 'Sodium': 290, 'Total Carbohydrate': 2, 'Protein': 21}, 
+    ])
 
 pprint('-' * 100)
 pprint(f'food_items:\n{food_items}')
 
-food_items_transformed = list([transform_food_item(
-    food_item=food_item) for food_item in food_items])
-heap_items = list(food_items_transformed | select(
-    lambda x: (x['name'], -x['net score'])))
+ranks = dict({
+    'Protein': 1,
+    'Dietary Fiber': 2,
+    'Potassium': 3,
+    'Cholesterol': -1,
+    'Total Fat': -2,
+    'Sugar': -3,
+})
+food_items_transformed = list([transform_food_item(food_item=food_item, ranks=ranks) for food_item in food_items])
+heap_items = list(food_items_transformed | select(lambda x: (x['name'], -x['net score'])))
 
 pprint('-' * 100)
 pprint(f'food_items_transformed:\n{food_items_transformed}')
