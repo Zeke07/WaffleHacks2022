@@ -1,0 +1,5 @@
+numpy
+pipe
+praw
+python-dotenv
+twilio
