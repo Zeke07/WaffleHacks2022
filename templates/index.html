@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&family=Poppins:wght@500&family=Questrial&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <title>LunchMoney</title>
+</head>
+<body>
+    <div><h1><span style="color:bisque;">lunch</span><span style="color:#9eec86;">money</span></h1></div>
+    <div class="slogan">
+        <p>Eat Healthy,</p>
+        <p>Stay Wealthy</p>
+    </div>
+    <br>
+    <br>
+    <form method="post">
+        <div class="input-container">
+        <input spellcheck="false" type="text" name="budget"
+               placeholder="What's your budget?"
+               value="{{ request.form['budget'] }}"></input>
+        <input spellcheck="false" type="text" name="query"
+               placeholder="Anything in mind?"
+               value="{{ request.form['query'] }}"></input>
+        </div>
+        <a href="#section2"><button>Continue</button></a>
+        <h2 id="section2"><span style="color:bisque;">Prioritize</span> your <span style="color:#9eec86;">Nutrition</span></h2>
+        <div class="nutri1">
+    <h3>Nutrition to Maximize</h3>
+        <ul>
+            <label for="thing1"></label>
+            <select name="thing1" id="thing1">
+            <option selected disabled>Select</option>
+            <option value="Protein">Protein</option>
+            <option value="Total Carbohydrates">Carbohydrates</option>
+            <option value="Total Fat">Fats</option>
+            <option value="Dietarty Fiber">Fiber</option>
+            </select>
+            <label for="thing2"></label>
+            <select name="thing2" id="thing2">
+            <option selected disabled>Select</option>
+            <option value="Protein">Protein</option>
+            <option value="Total Carbohydrates">Carbohydrates</option>
+            <option value="Total Fats">Fats</option>
+            <option value="Dietary Fiber">Fiber</option>
+            </select>
+            <label for="thing3"></label>
+            <select name="thing3" id="thing3">
+            <option selected disabled>Select</option>
+            <option value="Protein">Protein</option>
+            <option value="Total Carbohydrates">Carbohydrates</option>
+            <option value="Total Fats">Fats</option>
+            <option value="Dietary Fiber">Fiber</option>
+            </select>
+        </ul>
+            </div>
+    <div class="nutri2">
+        <h3>Nutrition to Minimize</h3>
+        <ul>
+            <label for="thing4"></label>
+            <select name="thing4" id="thing4">
+            <option selected disabled>Select</option>
+            <option value="Saturated Fat">Saturated Fat</option>
+            <option value="Trans Fat">Trans Fat</option>
+            <option value="Cholesterol">Cholesterol</option>
+            <option value="Sodium">Sodium</option>
+            <option value="Sugar">Sugar</option>
+            </select>
+            <label for="thing5"></label>
+            <select name="thing5" id="thing5">
+            <option selected disabled>Select</option>
+            <option value="Saturated Fat">Saturated Fat</option>
+            <option value="Trans Fat">Trans Fat</option>
+            <option value="Cholesterol">Cholesterol</option>
+            <option value="Sodium">Sodium</option>
+            <option value="Sugar">Sugar</option>
+            </select>
+            <label for="thing6"></label>
+            <select name="thing6" id="thing6">
+            <option selected disabled>Select</option>
+            <option value="Saturated Fat">Saturated Fat</option>
+            <option value="Trans Fat">Trans Fat</option>
+            <option value="Cholesterol">Cholesterol</option>
+            <option value="Sodium">Sodium</option>
+            <option value="Sugar">Sugar</option>
+            </select>
+        </ul>
+            </div>
+        <button class="lower" type="submit">Find Food</button>
+    </form>
+
+
+
+</body>
+</html>
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&family=Poppins:wght@500&family=Questrial&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <title>LunchMoney</title>
+</head>
+<body>
+    <div><h1><span style="color:bisque;">lunch</span><span style="color:#9eec86;">money</span></h1></div>
+    <div class="slogan">
+        <p>Eat Healthy,</p>
+        <p>Stay Wealthy</p>
+    </div>
+    <br>
+    <br>
+    <form method="post">
+
+        <div class="input-container">
+        <input spellcheck="false" type="text" name="budget"
+               placeholder="What's your budget?"
+               value="{{ request.form['budget'] }}"></input>
+        <input spellcheck="false" type="text" name="query"
+               placeholder="Anything in mind?"
+               value="{{ request.form['query'] }}"></input>
+        </div>
+         <h2>Prioritize your Nutrition</h2>
+        <div class="nutri">
+            <label for="thing1">1</label>
+            <select name="thing1" id="thing1">
+              <option selected disabled>Select</option>
+              <option value="Protein">Protein</option>
+              <option value="Total Carbohydrate">Carbohydrates</option>
+              <option value="Total Fat">Fats</option>
+              <option value="Dietary Fiber">Fiber</option>
+            </select>
+            <label for="thing2">2</label>
+            <select name="thing2" id="thing2">
+              <option selected disabled>Select</option>
+              <option value="Protein">Protein</option>
+              <option value="Total Carbohydrate">Carbohydrates</option>
+              <option value="Total Fat">Fats</option>
+              <option value="Dietary Fiber">Fiber</option>
+            </select>
+            <label for="thing3">3</label>
+            <select name="thing3" id="thing3">
+              <option selected disabled>Select</option>
+              <option value="Protein">Protein</option>
+              <option value="Total Carbohydrate">Carbohydrates</option>
+              <option value="Total Fat">Fats</option>
+              <option value="Dietary Fiber">Fiber</option>
+            </select>
+
+        </div>
+
+        <button type="submit">Find Food</button>
+
+    </form>
+
+
+</body>
+</html>
+-->
