@@ -98,11 +98,6 @@ def create_model(query, price=20.0):
 print(create_model("egg",10.0))
 
 
-'''
-@views.route("/", methods=("GET","POST"))
-def home():
-    return render_template("food_driver.html")
-'''
 
 
 
