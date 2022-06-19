@@ -1,110 +1,4 @@
-/*
-html {
-    background: url(kitchen.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 
-body {
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-}
-
-h1 {
-    text-align: left;
-    margin-top: 30px;
-    font-size: 3rem;
-    margin-left: 30px;
-    font-family: 'Raleway', sans-serif;
-    margin-bottom: 60px;
-    padding-bottom: 50px;
-}
-
-.slogan {
-    text-align: center;
-    margin-top: 0;
-    font-size: 2rem;
-}
-
-.slogan {
-    text-align: left;
-    margin-left: 25px;
-    margin-top: 50px;
-}
-
-.slogan p {
-    margin: 0;
-    font-size: 6rem;
-    font-family: 'Questrial', sans-serif;
-    padding: 0;
-
-}
-
-ul {
-    display: block;
-    margin: auto;
-    text-align: center;
-}
-
-form button{
-    text-align: left;
-    margin-left: 20px;
-    width: 200px;
-    height: 60px;
-    font-size: 2rem;
-    margin-top: 10px;
-    font-family: 'Questrial', sans-serif;
-    background: #9eec86;
-    color: black;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-
-}
-
-form button:hover {
-    background: #81b970;
-    transition: 0.25s;
-}
-
-.input-container {
-    padding-left: 20px;
-    padding-top: 20px;
-    text-align: left;
-}
-
-.input-container input {
-    width: 600px;
-    height: 60px;
-    font-size: 2rem;
-    font-family: 'Open Sans', sans-serif;
-    padding-left: 15px;
-    display: block;
-    margin-bottom: 10px;
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px white solid;
-    color: white;
-}
-
-::placeholder {
-    color: rgba(255, 255, 255, .7);
-    opacity: 1;
-}
-h2 {
-    text-align: center;
-    font-family: 'Questrial', sans-serif;
-    font-size: 4rem;
-}
-form {
-        padding-bottom: 150px;
-}
-.nutri1 {
-    text-align: left;
-    color: red;
-}
-*/
 html {
     background: url(kitchen.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -283,3 +177,111 @@ h3 {
     text-align: center;
     color: red;
 }
+
+/*
+html {
+    background: url(kitchen.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: left;
+    margin-top: 30px;
+    font-size: 3rem;
+    margin-left: 30px;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 60px;
+    padding-bottom: 50px;
+}
+
+.slogan {
+    text-align: center;
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.slogan {
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 50px;
+}
+
+.slogan p {
+    margin: 0;
+    font-size: 6rem;
+    font-family: 'Questrial', sans-serif;
+    padding: 0;
+
+}
+
+ul {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+form button{
+    text-align: left;
+    margin-left: 20px;
+    width: 200px;
+    height: 60px;
+    font-size: 2rem;
+    margin-top: 10px;
+    font-family: 'Questrial', sans-serif;
+    background: #9eec86;
+    color: black;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+form button:hover {
+    background: #81b970;
+    transition: 0.25s;
+}
+
+.input-container {
+    padding-left: 20px;
+    padding-top: 20px;
+    text-align: left;
+}
+
+.input-container input {
+    width: 600px;
+    height: 60px;
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 15px;
+    display: block;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px white solid;
+    color: white;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, .7);
+    opacity: 1;
+}
+h2 {
+    text-align: center;
+    font-family: 'Questrial', sans-serif;
+    font-size: 4rem;
+}
+form {
+        padding-bottom: 150px;
+}
+.nutri1 {
+    text-align: left;
+    color: red;
+}
+*/
