@@ -1,12 +1,15 @@
-import copy
+'''
+Base application for Flask communication with app webpage
+Version Date: 6-19-2022
+'''
 
+import copy
 from flask import render_template, Blueprint, request, flash
 import main
 import algorithm
 from pipe import select, where
 import heapq
-#products=main.create_model("meat", 20.0)
-#print(products)
+
 
 views = Blueprint(__name__,'views')
 
@@ -23,12 +26,7 @@ def home():
         nut5=request.form['thing5']
         nut6=request.form['thing6']
         list=[nut1,nut2,nut3,nut4,nut5,nut6]
-        '''
-        for item in list:
-            if not item:
-                flash("required")
-                is_loaded=False
-        '''
+       
         if not budget:
             flash("Budget is required")
         elif not query:
@@ -38,7 +36,7 @@ def home():
             result=main.create_model(query, budget)
             print(result)
             food_items_transformed=[]
-            #food_items_transformed = list([transform_food_item(food_item=food_item, ranks=rankings) for food_item in result])
+          
             for food_item in result:
                 food_item_local = copy.deepcopy(x=food_item)
                 food_item_local = algorithm.filter_food_item(food_item=food_item_local)
@@ -46,10 +44,8 @@ def home():
                 food_item_local= algorithm.append_net_score(food_item=food_item_local)
                 food_items_transformed.append(food_item_local)
 
-            #print(food_items_transformed)
-            #heap_items = list(food_items_transformed | select(lambda x: (x['name'], -x['net score'])))
+        
             output=max(food_items_transformed, key=lambda x: x['net score'])
-            print(output)
 
 
 
