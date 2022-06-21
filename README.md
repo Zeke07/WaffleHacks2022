@@ -4,8 +4,11 @@ By: Caijun Qin, Kevin Parfien, Usman Khan, Zayn Khan
 
 ## Roles:
    Math model: Caijun
+   
    Data Processing/Backend: Zayn Khan, Kevin
+   
    Frontend: Usman
+   
    Frameworks/Tools: Python, HTML, CSS, Selenium, Flask, BS4, regex, pipe
 
 ![language](https://img.shields.io/badge/language-python3.10.4-yellow?style=plastic&logo=appveyor)
