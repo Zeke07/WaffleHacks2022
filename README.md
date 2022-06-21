@@ -1,4 +1,5 @@
 # WaffleHacks 2022 (2nd in 'Best Use of Data' and 'Student Food Insecurity') 🥪
+By: Caijun Qin, Kevin Parfien, Usman Khan, Zayn Khan
 
 ![language](https://img.shields.io/badge/language-python3.10.4-yellow?style=plastic&logo=appveyor)
 ![language](https://img.shields.io/badge/language-HTML/CSS/JS-orange?style=plastic&logo=appveyor)
