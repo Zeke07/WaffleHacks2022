@@ -21,11 +21,11 @@ WaffleHacks 2022<br>
 **Find Healthy Food Options In Your Budget!**
 
 ## It's Simple To Use!
-1. Choose your nutrition priorities
+1. Choose the nutrition you want to maximize and minimize
 
 <img src="https://github.com/Zeke07/WaffleHacks2022/blob/main/screenshots/prioritize_your_nutrition.png" width="50%">
 
-2. See the best local option
+2. See the best food option based on your nutrional priorities
 <img src="https://github.com/Zeke07/WaffleHacks2022/blob/main/screenshots/best_option.png" width="50%">
 
 ## Click below to view live demo
