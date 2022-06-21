@@ -2,7 +2,7 @@
 By: Caijun Qin, Kevin Parfien, Usman Khan, Zayn Khan
 
 
-##Roles:
+## Roles:
    Math model: Caijun
    Data Processing/Backend: Zayn Khan, Kevin
    Frontend: Usman
