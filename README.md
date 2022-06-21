@@ -1,6 +1,5 @@
-# LunchMoney🥪
-## WaffleHacks 2022 
-## Winner in 'Best Use of Data' and 'Best Project: Food Insecurity'
+# LunchMoney🥪 
+## Winner in 'Best Use of Data' and 'Best Project: Food Insecurity' @ WaffleHacks 2022
 By: Caijun Qin, Kevin Parfien, Usman Khan, Zayn Khan
 
 
