@@ -3,11 +3,7 @@ By: Caijun Qin, Kevin Parfien, Usman Khan, Zayn Khan
 
 
 ## Roles:
-   Math model: Caijun
-   
-   Data Processing/Backend: Zayn, Kevin, Usman
-   
-   Frontend: Usman
+   Build on: Math model, web-scraping data model
    
    Frameworks/Tools: Python, HTML, CSS, Selenium, Flask, BS4, regex, pipe
 
