@@ -18,9 +18,9 @@ WaffleHacks 2022<br>
 
 ![thumbnail](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/002/009/977/datas/small.jpg)
 
-Find Healthy Food Options In Your Budget!
+**Find Healthy Food Options In Your Budget!**
 
-## It is simple to use!
+## It's Simple To Use!
 1. Choose your nutrition priorities
 
 <img src="https://github.com/Zeke07/WaffleHacks2022/blob/main/screenshots/prioritize_your_nutrition.png" width="50%">
