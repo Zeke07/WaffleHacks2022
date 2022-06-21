@@ -1,10 +1,13 @@
-# WaffleHacks 2022 (2nd in 'Best Use of Data' and 'Student Food Insecurity') 🥪
+# WaffleHacks 2022 (2nd in 'Best Use of Data' and 'Best Project: Student Food Insecurity') 🥪
 By: Caijun Qin, Kevin Parfien, Usman Khan, Zayn Khan
 
 
 ## Roles:
+   Math model: Caijun
    
-   Backend algorithms: Math model using weighted variables, web-scraping data model
+   Data Processing/Backend: Zayn, Kevin, Usman
+   
+   Frontend: Usman
    
    Frameworks/Tools: Python, HTML, CSS, Selenium, Flask, BS4, regex, pipe
 
