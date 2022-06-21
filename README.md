@@ -4,7 +4,7 @@ By: Caijun Qin, Kevin Parfien, Usman Khan, Zayn Khan
 
 ## Roles:
    
-   Utilized: Math model using weighted variables, web-scraping data model
+   Backend algorithms: Math model using weighted variables, web-scraping data model
    
    Frameworks/Tools: Python, HTML, CSS, Selenium, Flask, BS4, regex, pipe
 
