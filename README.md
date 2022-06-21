@@ -1,5 +1,5 @@
 # LunchMoney🥪 
-## Caijun Qin, Kevin Parfien, Usman Khan, Zayn Khan
+## By Caijun Qin, Kevin Parfien, Usman Khan, Zayn Khan
 ** 🏆Winner in **Best Use of Data** & **Best Project: Food Insecurity** @ WaffleHacks 2022
 
 
