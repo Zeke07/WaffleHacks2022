@@ -18,7 +18,7 @@ WaffleHacks 2022<br>
 
 ![thumbnail](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/002/009/977/datas/small.jpg)
 
-How to eat healthy within a tight budget! 
+Find Healthy Food Options In Your Budget!
 
 ## It is simple to use!
 1. Choose your nutrition priorities
