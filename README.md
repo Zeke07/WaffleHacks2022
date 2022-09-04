@@ -8,7 +8,7 @@ WaffleHacks 2022<br>
 ## Roles:
    Build on: Math model, web-scraping data model
    
-   Frameworks/Tools: Python, HTML, CSS, Selenium, Flask, BS4, regex, pipe
+   Frameworks/Tools: Python, HTML, CSS, Selenium, Flask, BS4, regex, pipes
 
 ![language](https://img.shields.io/badge/language-python3.10.4-yellow?style=plastic&logo=appveyor)
 ![language](https://img.shields.io/badge/language-HTML/CSS/JS-orange?style=plastic&logo=appveyor)
